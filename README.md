@@ -9,6 +9,6 @@ This paper estimates the surface area of a 3D model based entirely on two images
 * **Parabolic, quartic, and quintic functions**: Used to model various sections of the clock's front face and wavey details.
 * **Geometry of cones, cylinders, and trapeziums**: Approximating golden hinges and ornament sections.
 * **Pixel analysis**: Using images and tools like GIMP and rapidtables.com for precise measurement of dimensions.
-* **Modern tools**: Integration with online graphing software like GeoGebra and Desmos to plot and analyze complex shapes.
+* **Modern tools**: Integration with online graphing software like GeoGebra and Desmos to plot and analyse complex shapes.
 
 This paper was graded as 18/20 (90%) by the IB. I think it is a good starting point for anyone attempting to model 3D properties such as depth using only 2D images.
