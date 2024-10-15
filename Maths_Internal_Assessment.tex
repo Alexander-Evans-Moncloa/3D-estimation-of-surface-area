@@ -1,0 +1,436 @@
+\documentclass[a4paper,12pt]{article}
+\title{\textbf{Calculating the surface area of a 3D grandfather clock model}}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+\begin{document}
+
+
+\date{\textbf{Mathematics Higher Level Internal Assessment}}
+\maketitle
+\tikz[remember picture,overlay] \node[opacity=0.25,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{blankclock.png}};
+\clearpage
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.3]{fig1.png}
+\caption{3 coloured images of a 3D grandfather clock model found on turbosquid.com (Turbo). Different renders of the same model have been used.}
+\label{fig:clock1}
+\end{center}
+\end{figure}
+
+\section{Introduction and Rationale}
+This essay will be focused on using given angles and proportions to accurately calculate the surface area of the wooden segments of the front face of this grandfather clock as well as the surface area of the golden disks and cylinders inside the clock. I will use the diameter of the central disk as my reference length ($x$ units) which also corresponds to the width of the glass panel in front of it.\\\\ Every length of every shape in or on the clock will be measured relative to $x$ units and labelled. There are some wavy sections of the clock, such as the double spirals at the top and the curves above and below the central glass pane. Double integration to find a 3D function's surface area; integrating polar functions; area of a surface of revolution of circular functions; modelling and integrating parabolic, quartic and quintic functions; finding arc lengths of these functions; circular and parabolic graph transformations as well as a heavy use of trigonometric ratios; the sine and cosine rule; advanced geometry, and modern technology to measure and calculate the depth of different areas.\\\\Once every wooden piece and gold piece has had their surface area calculated, the wooden and gold pieces as collectives will be given 2 separate surface areas, both relative to $x$ units. This would give a sculptor an exact ratio of the wood to gold surface area on the front face of the clock, regardless of the scale factor this clock is constructed to. This can be used to find the amount of wood varnish and gold paint needed, which would cut costs and save the sculptor time.\\\\To begin with, the front face of the clock will be broken down into sections. Each section will be a unique shape on the front face of the clock and will be given a name and corresponding figure. They will be categorised as either a wooden piece or a gold piece. This will be determined by the colours shown for pieces in Figure 1.\\\\
+As previously stated, all lengths will be written as a multiple of $x$. The website rapidtables.com will be used to count the pixels in Figure 2 compromising length $x$ and will also be used to count all the other needed lengths needed in pixels. The other pixel counts will be divided by the pixel count of length $x$ as such to obtain the length as a function of $x$: $$\frac{other pixel count}{x pixel count} = length value in x units$$ 
+Once all the needed lengths are calculated, the shape area will be calculated and given in $x$ units. Pixels are being used to find the lengths because they offer the highest degree of accuracy when dealing with a digital image. All lengths and areas will be given to 3 decimal places due to it being less cumbersome to work with whilst reaching a point of diminishing returns with the accuracy.\\\\
+When most of the shapes on the front face of the clock have been calculated, Figure 3 and Figure 4 will be used to measure the depth of some of the shapes not visible with Figure 2. GIMP 2 will be used to find the angles shown which will be used to calculate the previously hidden lengths as multiples of $x$ then their areas will be calculated.\\\\
+Now all the surface area of the wooden pieces will be summed as well as the surface area of the pieces to be painted gold. Finally, the $x$ units can be removed and the area value for the wood and gold can be compared as a ratio. Any sculptor can use this ratio to calculate the exact amount of wood varnish and gold paint needed by measuring the central disk in millimetres and multiplying that real length by the numbers given in the unsimplified ratio (the true surface area of the wood and the gold pieces) then multiplied by however many millilitres of varnish/paint needed to cover 1mm of wood/metal. An example of this process will be shown in the conclusion.\\
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.21]{fig2.png}
+\caption{Front facing render of the grandfather clock model with length $x$ shown. All sections to be calculated are colour coded with a key.}
+\label{fig:clock2}
+\end{center}
+\end{figure}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.25]{fig3.png}
+\caption{Blank slightly side angled facing render of the grandfather clock model with length $x$ shown as the red lines (different lengths due to the shape transformation of the 3D viewing).}
+\label{fig:clock3}
+\end{center}
+\end{figure}
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.18]{fig4.png}
+\caption{Coloured top angled facing render of the grandfather clock model with length $x$ shown as the red lines (different lengths due to the shape transformation of the 3D viewing).}
+\label{fig:clock4}
+\end{center}
+\end{figure}
+
+\section{Front Face Sections}
+
+\subsection{First Section}
+This section of the front face is subjectively the easiest to calculate. It will be the sum of all rectangular shape areas on the surface of the clock. They will be broken down into Wooden First Section and Golden First Section by using Figure 1.\\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.195]{fig5.png}
+\caption{Blank front facing render of the grandfather clock model with length $x$ shown and labelled as well as all corresponding rectangular sections highlighted in pink with their respective lengths given in $x$ units. Raw pixel count included (denoted as ``px'') to show the process of finding the lengths.}
+\label{fig:clock5}
+\end{figure}
+\\Figure 5 has been created to to demonstrate visually the areas that will be worked on which are strictly rectangular in nature and on the front face of the clock. To find the area of a rectangle this formula will be used: $$Area = \Delta x \times \Delta y$$
+Due to the fact that none of the shown squares line up with the gold section of the clock, the value for Golden First Section will be 0$x^2$ by default.
+\\The value for Wooden First Section will be the sum of the area of all shown rectangles. The previously shown formula will now be applied within a larger sum equation to calculate the value for Wooden First Section in one equation: 
+\begin{equation}
+\begin{aligned} 
+&(0.247\times0.043)+(0.040\times5.433)+\\&2(0.123\times1.200)+2(0.08\times0.09)+\\&(1.103\times0.127)+(1.427\times0.030)+\\&2(0.12\times3.75)+(1.753\times0.830) &=3.075x^2 
+\end{aligned}
+\end{equation}
+Therefore to conclude, Wooden First Section has a value of 3.075$x^2$ and Golden First Section has a value of 0$x^2$.
+
+
+\subsection{Second Section}
+\begin{figure}
+\centering
+\includegraphics[scale=0.15]{fig6.png}
+\caption{Blank front facing render of the grandfather clock model with length $x$ shown and labeled as well as all corresponding circular and cylindrical sections in turquoise with their respective lengths given in $x$ units.}
+\label{fig:clock6}
+\end{figure}
+This section will be the sum of all spherical and cylindrical shape areas on the surface of the clock. As before, it will also be broken down into Wooden Second Section and Golden Second Section using Figure 1. Two formulaes will be used to find the area in $x$ units. These will be: $$Area = \pi r^2$$  $$Area = 2\pi r^2 + (2\pi r\times h)$$ (where $r$ = radius and $h$ = height)
+\\\\Due to the fact that none of the shown circles or cylinders line up with the wooden section of the clock, the value for Wooden Second Section will be 0$x^2$ by default. \\The value of Golden Second Section will be the sum of the area of all shown circles and cylinders. There is a section where I will combine the rectangle formula with the circle formula to find the area as the section consists of a square with a negative area of a circle inside it. Each individual shape will be given a letter.\\
+\begin{equation}
+\begin{aligned} 
+ &\; 3(2\pi\times0.112\times0.867)\;[A]\\&+2(\pi0.035^2) \; [B]\\&+6((2\pi\times0.127^2)+(2\pi\times0.127\\&\times0.023)-(\pi\times0.122^2)) \; [C]\\&+2(2\pi\times0.025\times0.013)\;[D]\\&+6((\pi0.087^2)-(\pi0.060^2))\;[E]\\&+6(\pi0.017^2)\;[F]\\&+\pi0.333^2 \;[G]\\&+0.967\times0.967\; [H]\\&+3(2\pi0.003\times(6.4+0.273))\;[I]\\&-\pi0.483^2\; [Y]\\&-3(2\pi0.122\times0.183)\;[Z] \\&= 2.911x^2
+\end{aligned}
+\end{equation}
+\\Therefore to conclude, Wooden Second Section has a value of 0$x^2$ and Golden Second Section has a value of 2.911$x^2$.
+
+
+\subsection{Third Section}
+\begin{figure}
+\centering
+\includegraphics[scale=0.205]{fig7.png}
+\caption{Front facing render of the pendulum with length $x$ shown and labelled as well as the radius of the outer and inner circle written in $x$ units. The cone-like golden section is highlighted in blue.}
+\label{fig:clock7}
+\end{figure}
+This section will be dedicated to finding the surface area of the pendulum. As seen above in Figure 7, the distance from the centrepoint to the edge of the pendulum is 0.5$x$ and the radius of the blank circle is 0.26$x$. 
+This is going to be the first section in which Figure 3 will have to be used to calculate the pendulum depth. To find the pendulum depth we will first use Figure 8 which shows the depth respective to $x$ units. The issue with simply using this value of 0.056$x$ is that the depth is not being viewed from a side angle of 90\degree \: relative to the clock face. From Figure 2, the depth cannot be seen as the viewing angle is 90\degree \: relative to the pendulum depth. The reason why Figure 3 must be used is that there exists no image of the depth from a 0\degree \:viewing angle and even if there was, it would be useless as the image would not have a base $x$ unit reference length to find the depth in $x$ units (only the raw pixel count could be used which is useless). 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{fig8.png}
+\caption{Distorted pendulum depth shown in $x$ units using Figure 3.}
+\label{fig:clock8}
+\end{figure}
+\\We need to convert the seen 0.056$x$ depth into the true depth. To do this we need to recognise that this problem can be seen as a simple right angled trigonometry problem. The 0.056$x$ we see is the base of the triangle and hypotenuse is the true length we are trying to find. All we need is to either know the height of the triangle or one of the angles touching the hypotenuse. We have no way of finding the height but all of the angles can be found as they correspond with the viewing angles. This can be proven intuitively by making the angle base to hypotenuse angle close to 0\degree \:which shows the hypotenuse as being almost the same length as the base which lines up with the common knowledge that viewing a line from a 0\degree \:angle (being front facing) shows the true undistorted length. It can also be proven intuitively by making the angle close to 90\degree \:where no matter the hypotenuse length, the base is almost 0$x$. This also lines up with common knowledge that viewing a line from a side view makes it invisible. Pythagoras' Theorem has been used in the figure below, $c^2-a^2=b^2$ where $c=520, a=400$ and $b=332$. The sine rule was then used to find angle $y$ then triangle identities to find angle $x$.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{fig9.png}
+\caption{Both figures overlain to calculate viewing angles.}
+\label{fig:clock9}
+\end{figure} 
+\\Now there is the challenge of finding the viewing angle of Figure 3. This can be done by overlaying Figure 3 with Figure 2, using a shared length that is visible in both figures to use the same system just described but as the hypotenuse and base lengths are given, the angles can be calculated. The overlaying must be done because Figure 3 has significantly lower definition than Figure 2 for unknown reasons hence they must both be lain on the same canvas for the pixel counts to be an accurate ratio. There is the issue that Figure 3 was taken from a close distance, hence there being significant and increasing distortion of lengths the higher up the clock goes. Fortunately, the base of the clock has no such distortion therefore that will be the length used to find the viewing angle. The viewing angle is calculated in Figure 9. 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{fig10.png}
+\caption{All the below lengths demonstrated visually.}
+\label{fig:clock10}
+\end{figure}\\Now we have the viewing angle relative to the pendulum depth (50.285\degree ) we can find the true cone height in $x$ units. This can be done with the following sine rule equation: $$\frac{0.056} {sin(39.715)}=0.088$$ Now we know that 0.088$x$ is the true pendulum depth, we can use basic trigonometry to find all the values needed to construct our cones needed. \\All of the mathematics done to find these values will be written below and a model will be shown in Figure 10 to aid visualisation of these calculations. \\\\$$\sqrt{{0.24^2}+{0.088^2}}=0.256\;[Orange]$$
+$$(\frac{0.2556247249}0.24)\times0.26=0.277\;[Yellow]$$
+$$\sqrt{{0.2769267854^2}-{0.26^2}}=0.095\;[Purple]$$
+$$0.095+0.088=0.183\;[Light Blue]$$
+\\\\
+\\Now the values have been calculated, the large imaginary cone (using 0.5$x$ as the radius and 0.183$x$ as the height) can have its surface area calculated then the surface area of the smaller cone (made from 0.26$x$ radius and 0.096$x$ height) will be removed. Finally, the inner ring's surface area will be added by using the cylinder surface area formula but ignoring the $2\pi r^2$ part of the formula as it is an inverted open ended cylinder. The formula used to find the cone surface area will be: $$Area=\pi r s + \pi r^2$$ Where $r$ = radius and $s$ = slant height (shown in orange and yellow respectively).
+$$Large Cone = 1.623 = \pi\times0.5(0.277+0.256)+\pi\times0.5^2$$
+$$Small Cone = 0.439 = \pi\times0.26(0.277)+\pi\times0.26^2$$
+$$Inner Ring = 0.144 =2\times\pi\times0.26\times0.088$$
+Now the final pendulum surface area can be found out by adding the inner ring surface area to the large cone surface area and subtracting the small cone surface area.
+\begin{equation}
+\begin{aligned} 
+PendulumSurfaceArea &= 1.328 \\&= Large Cone - Small Cone + Inner Ring \\&= 1.623-0.439+0.144
+\end{aligned}
+\end{equation}
+As there are no wooden pendulum sections, we can conclude that Wooden Third Section is 0$x^2$ and Golden Third Section is 1.328$x^2$.
+
+
+
+\subsection{Fourth Section}
+
+The fourth section will be dedicated to finding the surface areas of all 2D semicircular and semielliptical shape areas. The areas A, B, C and D will be first calculated, then the depth will be calculated in the Fifth Section along with areas W, Y and Z. Using Figure 1 it has been determined that all of the described areas are wooden, hence the total calculated value will be the Wooden Fourth Section and Golden Fourth Section will be 0$x^2$.
+\\
+\\
+\\
+\\
+\\
+\\
+The areas shown below will be calculated by forming parabolas that meet the length and height of the pixel counts and integrating these functions with the the roots as the boundaries. The shape matches with a negative $x^2$ graph, therefore the formula for all parabolas will be follow of the function: $$y=-kx^2+c$$ Where $y$ is the height, $x$ is the width, $k$ is a constant and $c$ is a constant.
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.55em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.34]{fig11.png}
+\caption{All the areas demonstrated visually with lengths given in $x$ units.}
+\label{fig:clock11}
+\end{figure}
+\\The value of $c$ will be the y intercept of the function, therefore the height of each parabola will be substituted into $c$. The value of $k$ will dictate the general shape of the function and the roots must equal to $\pm$ the width in $x$ units from the middle of the area. The formula can be rearranged as seen below to make $k$ the subject: $$k=\frac{-(y-c)}{x^2}$$ An example of this being used to find the parabola for the outer side of Area D is shown: $$k=\frac{-(0-0.427)}{0.65^2}=1.010650888$$ $$\therefore \; y=-(1.010650888)x^2+0.427$$ The areas can be found by subtracting the area under the curve of the inner parabola from the area under the curve of the outer parabola. Using Area D as an example, the following integration is done to find this value: $$\int_{-0.633}^{0.633}{-(1.010650888)x^2+0.427+(0.9808105538)x^2+0.393}\;dx=1.033$$ As areas C and B are also have no depth, the same process is used to find the area. The k value for the outer parabola and inner parabola of area C and B is shown before the final integration equation that was calculated using a GDC (Graphical Display Calculator).
+\begin{equation}
+\begin{aligned} 
+Outer\; k=\frac{-(0-0.476)}{0.667^2}=1.069929803\\
+Inner\; k=\frac{-(0-0.407)}{0.633^2}=1.01575037\\
+\int_{-0.633}^{0.633}{-(1.069929803)x^2+0.476+(1.01575037)x^2+0.407}\;dx=1.119\; [C]&\\\\
+Outer\; k=\frac{-(0-0.523)}{0.633^2}=1.305251704\\
+Inner\; k=\frac{-(0-0.367)}{0.46^2}=1.734404537\\
+\int_{-0.633}^{0.633}{-(1.305251704)x^2+0.523}\;dx-\int_{-0.46}^{0.46}{-(1.734404537)x^2+0.367}\;dx&\\=0.216\;[B] 
+\end{aligned}
+\end{equation}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.24]{fig12.png}
+\caption{Parabolas for Area B graphed in desmos.com with Area B overlain to show difference in shape.}
+\label{fig:clock12}
+\end{figure}
+\\As seen in Figure 12, the parabolas do not make the exact shape of the perhaps originally circles or ellipses used to construct these shapes, but the area between the parabolas is still a good approximation of the area due to the lines undercutting the curves of the original shape by an equal margain. 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.2]{fig13.png}
+\caption{A zoomed in look at Section A for clarity.}
+\label{fig:clock13}
+\end{figure}
+
+Area A is a mixture of rectangular areas although is not included in the First Section due to the parabola cutting into the shape. Area A therefore is:
+\begin{equation}
+\begin{aligned} 
+(0.22\times0.13)+(0.08\times0.097)- \int_{-0.633}^{-0.6}{-(1.305251704)x^2+0.523}\;dx&\\=0.035\;[A]
+\end{aligned}
+\end{equation}
+Therefore the area of the Wooden Fourth Section is 2.403$x^2$ and the Golden Fourth Section is 0$x^2$.
+
+
+\subsection{Fifth Section}
+Areas W, Y and Z must be modelled in 3D as well as the sloped rectangular sections on the clock face. The diagram on the following page shows the straight sloped sections in purple and the corners in blue.\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.218]{fig14.png}
+\caption{The left side shows the front facing render with the height of each edge in $x$ units including the corners, the right side shows the side facing render with width A, width B and width C shown in $x$ units. All sloped rectangular sections are highlighted in purple, all corners in dark blue.}
+\label{fig:clock14}
+\end{figure}
+\\\\\\The height of each sloped section is accurately given in $x units$ but the width it must be multiplied by cannot be fully seen using the side facing render. To see the real width the sloped edges must be seen face on, which would require the clock to be turned at a 45\degree \:angle assuming the slope is at a 45\degree \:angle. The angle the clock has been turned in the side facing render has previously been calculated in Figure 9 therefore the following triangles can be formed with the information known written in black.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{fig15.png}
+\caption{The left triangle represents how a front facing width of 520px is viewed from the 39.715\degree \:side facing render (400px) and the right triangle represents how the same front facing width would be viewed from an imaginary 45\degree \:render.}
+\label{fig:clock15}
+\end{figure}
+\\Using the equation solver in a CASIO fx-9860GII calculator, the following equation was solved to find the missing values in the right triangle: $$\sqrt{x^2+x^2}=520$$ $$x=367.696$$
+Now to find the true values for width A, B and C the measured widths for each width must be multiplied by $\frac{400}{367.696}$ as the shown widths in the side render are the original widths divided by $\frac{400}{367.696}$. \\\\Width A becomes 0.087$x$, width B becomes 0.044$x$ and width C becomes 0.109$x$.\\\\The surface area of the purple areas on the left side of Figure 14 can now be found by multiplying the corresponding heights with the newly found widths.
+\begin{equation}
+\begin{aligned} 
+&\;\;\;\;2(0.23\times0.087)+2(0.053\times0.087)+2(1.43\times0.087)\\&+3(1.357\times0.087)+2(3.75\times0.087)+3(1.043\times0.044)\\&+2(0.063\times0.044)+2(0.13\times0.044)+2(2.907\times0.109)=2.093
+\end{aligned}
+\end{equation}
+\\The corners can be calculated by forming right-angled triangles with the height found from the front facing render and width A/B/C as the base of the triangle.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{fig16.png}
+\caption{The convex corners with width A shown on the left, the concave corners with width B shown in the middle and the 2D corners with width C shown on the right. There are 2 concave corners with width A and 2 concave corners with width B not represented but they have the same surface area. }
+\label{fig:clock16}
+\end{figure}
+\\Using the formula $Area=\frac{1}{2}ab\sin(c)$ where $a$ is the height, $b$ is the width and $c$ is 90\degree, all 10 A corners have a collective surface area of 0.032$x$, all 6 B corners have a surface area of 0.004$x$ and all 4 C corners have a surface area of 0.012$x$.\\\\So far the wooden area is 2.141$x^2$ but is missing areas Z, Y and W that weren't calculated in the Fouth Section. To find these areas, a parabola will be fomed that lies as close to the centre of the shape as possible. The arc length will be found using the following formula (Lamar): $$Arc length=\int_{a}^{b}{\sqrt{1+(f(x))^2}}\;dx$$ The arc length will be multiplied by the width A/B/C (depending on the shape) to find a close approximation of the shape's surface area. Using Figure 11 and Figure 14, it is clear that shape Z has a width C, shape Y has a width A and shape W has a width B. \\\\Using the aforementioned process for formulating $y=-kx^2+c$ parabolas, the function running through the middle of shape Z will be: $$y=-(\frac{\frac{0.42+0.363}{2}}{\frac{0.637+0.617}{2}})x^2+(\frac{0.42+0.363}{2})$$ Now the area of shape Z can be found by applying the previously described method to the function as seen below: 
+\begin{equation}
+\begin{aligned} 
+&\int_{-0.627}^{0.627}{\sqrt{1+(-0.995856322x^2+0.3915)^2}}\;dx\\&\times0.109\; [width\; C]=0.153
+\end{aligned}
+\end{equation}
+Using this method, the arc length of shape Y can be multiplied by Width A to give an area of:
+\begin{equation}
+\begin{aligned} 
+1.175196536\times0.087\; [width\; A]=0.102
+\end{aligned}
+\end{equation}
+And finally shape W will have an area of:
+\begin{equation}
+\begin{aligned} 
+0.9261702731\times0.044\; [width\; B]=0.041
+\end{aligned}
+\end{equation}
+Therefore the Wooden Fifth Section is 2.437$x^2$ and the Golden Fifth Section is 0$x^2$.
+
+
+
+\subsection{Sixth Section}
+In this section the wavey sections will be calculated by using geogebra.org to form closely imitating functions and then integrating such functions to find the area of these sections. The golden hinges will also have their surface areas calculated using cones and cylinders to approximate their shape.\\
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.27]{fig17.png}
+\caption{The process of forming the graph using geogrebra.org shown.}
+\label{fig:clock17}
+\end{figure}\\As the following section looks like a quartic graph, the tool ``FitPoly()'' was used with the parameters being plotted points C to R with the degree of polynomial being 4. The points were plotted on a scaled image where 0.5 on the graph corresponds to $\frac{1}{2}$ of $x$ on the image and the x axis lies on the bottom of the area being calculated.\\\\As the shape is reflected along the centre, the graph must be reflected along the y-axis. To do this, the absolute value of each x value in the function must be taken. The formula therefore becomes:
+$$y=-32.37\bmod(x)^4+29.89\bmod(x)^3-6.9\bmod(x)^2+0.16\bmod(x)+0.35$$
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{fig18.png}
+\caption{The above formula  graphed using desmos.com with the integration parameters included.}
+\label{fig:clock18}
+\end{figure}
+\\It can be seen in Figure 17 that at 0.55$x$ the area's boundary is reached, therefore the integration parameters will be -0.55 and 0.55. Therefore, the area for this section can be calculated with the following integration:
+\begin{equation}
+\begin{aligned} 
+0.384&=\int_{-0.55}^{0.55}{-32.37\bmod(x)^4+29.89\bmod(x)^3}\\&-6.9\bmod(x)^2+0.16\bmod(x)+0.35\;dx
+\end{aligned}
+\end{equation}
+\\This may not be the exact surface area, as there is a some small depth present in this section, however the difference in surface area is negligable so it is treated like a flat surface. As there are 2 identical sections with this shape, the current wooden surface area is 0.768$x^2$ but there is a golden ornament as well as a smaller golden wavey section covering it which must be subtracted. \\\\The golden ornament can be approximated to be a collection of triangles and trapeziums, with the lengths of each shape making up the approximation shown in terms of $x$ in the diagram below.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.27]{fig19.png}
+\caption{Diagram of the ornament partitioned into several smaller sections for approximation.}
+\label{fig:clock19}
+\end{figure}
+\\Using the previously mentioned formula for finding the area of a right angled triangle as well as the following formula for finding the area of a trapezium $Area=\frac{1}{2}(a+b)h$ (where $a$ is the top width, $b$ is the bottom width and $h$ is the height) will be used to find the approximate area of the ornament.
+\begin{equation}
+\begin{aligned} 
+&(0.06\times0.16)+(0.183\times0.083)\;[Triangles]\\&+\frac{1}{2}(0.16+0.1)0.04+\frac{1}{2}(0.1+0.107)0.02\\&+\frac{1}{2}(0.107+0.183)0.04\;[Trapeziums]=0.038
+\end{aligned}
+\end{equation}
+\\The golden wavey section's approximate function is found using the same method with geogebra.com and gives a function of: $$y=-23.68x^4+24.11x^3-6.29^2+0.25x+0.22$$
+Using the previously used formula for finding the arc length of a parabola, the arc length of the golden wavey section will be approximately: $$0.513=\int_{0.07}^{0.57}{\sqrt{1+(-23.68x^4+24.11x^3-6.29^2+0.25x+0.22)^2}}\;dx$$ This will be multiplied by the thickness of the function, measured to be 0.037$x$, to give each gold wavey section a surface area of 0.019$x^2$ 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.27]{fig20.png}
+\caption{Function drawn in geogebra.org with the width in $x$ shown as well as the parameters of the integration.}
+\label{fig:clock20}
+\end{figure}\\There are 2 ornaments and 4 wavey sections therefore the total golden surface area covering the wood is 0.152$x^2$ and the wooden surface area will be the previous 0.768$x^2$ minus the golden surface area covering it, giving a final area of the Wooden Sixth Section of 0.616$x^2$.\\\\The golden hinges have not been accounted for yet, therefore will be modelled in this section too. As they are seen to be gold using Figure 1, their surface area will be added to the 0.152$x^2$ previously found.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.16]{fig21.png}
+\caption{Hinge zoomed in and broken down into area A (a cone), area B (a cos graph on the y axis revolved around the y axis) and area C (a cylinder).}
+\label{fig:clock21}
+\end{figure}\\To find the surface area for shape A a different formula will be used to find the surface area of the cone without the base. The formula used is: $$Area=\pi r\sqrt{h^2+r^2}$$ Where $r$ is the radius of the base and $h$ is the height of the cone. Applying this formula to a radius of 0.02$x$ and cone height of 0.017$x$, the surface area of the cone equates to 0.002$x^2$. \\\\The surface area for shape B can be found by graphing the surface as a cos(x) function and then applying a formula to find the area of a surface of revolution (around the x axis). To form a cos(x) graph that is the appropriate size, the following fomula with 3 additional variables will be used to complete the graph transformation: $$y=a\cos(bx)+c$$ $a$ will change the amplitude, therefore $\frac{1}{2}$ the distance from the widest part of the shape to the thinnest part of the shape will be $a$, therefore it will be 0.005. $b$ will transform the wavelength. To get the right transformation, the formula $\frac{2\pi}{length}$ must be used, hence $b$ is $\frac{2\pi}{0.027}$. $c$ will translate the entire function across the y axis, and must cause the maximum height of the function to be 0.02$x$. To find $c$ the amplitude must be subtracted from the desired height, therefore $c$ will be 0.015.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{fig22.png}
+\caption{Function of shape B graphed in desmos.com.}
+\label{fig:clock22}
+\end{figure}\\The formula used to find the area of a surface of revolution for this function is (Lamar): $$Area=\int_{a}^{b}{2\pi f(x)\sqrt{1+(f'(x))^2}}\;dx$$ \\To apply this formula the derivative of this function must be found first. The product rule has been applied to find the following derivation: $$f'(x)=\frac{-10\pi\sin(\frac{2000\pi x}{27})}{27}$$ and $f(x)$ can be simplified to be $\frac{cos(\frac{2000\pi x}{27})}{200}+\frac{3}{200}$ and will be written as such in the following integration: $$0.004=\int_{0}^{0.027}{2\pi (\frac{cos(\frac{2000\pi x}{27})}{200}+\frac{3}{200})\sqrt{1+(\frac{-10\pi\sin(\frac{2000\pi x}{27})}{27})^2}}\;dx$$ The surface area for shape C can be sound by using the formula for finding the surface area of a cylinder with open ends, which is $2\pi rh$ where $r$ is the radius and $h$ is the height. Applying this formula we get: $$0.023=2\pi\times0.02\times0.187$$ The surface area of the entire hinge is 2(A)+2(B)+C, which with values is 2(0.002)+2(0.004)+0.023, giving each hinge a surface area of 0.035$x^2$ and causing the surface area of all 4 hinges to be 0.14$x^2$. \\\\The Golden Sixth Section now has a surface area of 0.152$x^2$+0.14$x^2$, giving a final value of 0.292$x^2$.
+
+
+
+\subsection{Seventh Section}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{fig23.png}
+\caption{Areas A, B, C and D shown colour coded with all lengths and angles relevant to B shown in $x$ units.}
+\label{fig:clock23}
+\end{figure}
+To find area A, a $y=x$ line with the translation of +0.564 along the y axis will be integrated and the area under the graph of the parabola used in the Fourth Section (called Area D in that section) will be subtracted from this. The entire area will be duplicated as area A has been split by the middle. Written in one equation, the area shows to be:
+\begin{equation}
+\begin{aligned} 
+2\int_{0}^{0.25}{(x+0.564)-(-(1.010650888)x^2+0.427)}\;dx=0.142
+\end{aligned}
+\end{equation}
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{fig24.png}
+\caption{Both described functions shown in black and the boundary for integration shown in orange.}
+\label{fig:clock24}
+\end{figure}
+\\Area B will have the surface area calculated by finding the area of B that is smooth (either side where the spirals are) and finding the area that is ridged. The ridged area will be multiplied by a constant, calculated using 12 triangles with a depth of ``width B'' from the Fifth Section, corresponding to 0.044$x$. To firstly find the smooth area, the spirals must be modelled and subsequently integrated between the angles 0 radians and $\pi$ radians. 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{fig25.png}
+\caption{The spiral has been modelled over an image of the clock to scale. The equation is also shown in polar form.}
+\label{fig:clock25}
+\end{figure}\\\\The formula to integrate in polar form between 2 angles is (Lamar): $$Area=\int_{\alpha}^{\beta}\frac{1}{2}r^2\;d\theta$$
+Applying this formula to the spiral shown in Figure  25, the area for both spiral sections calculates to be: 
+\begin{equation}
+\begin{aligned} 
+\int_{0}^{\pi}{(0.09\theta)^2}\;d\theta=0.084
+\end{aligned}
+\end{equation}
+Using the horizontal length of 0.5$x$, a vertical length of 0.797$x$ and missing corners being 0.2$x$ by 0.25$x$ triangles, the current area of the ridged section can be calculated with the following equation: 
+\begin{equation}
+\begin{aligned} 
+0.5\times0.797-(2(\frac{1}{2}(0.5\times0.2)))-0.084=0.215
+\end{aligned}
+\end{equation}
+The ridged section consists of 12 triangular prisms next to each other with a height of 0.044$x$ and a base width of $\frac{0.5}{12\times2}$. By rearranging Pythagoras' Theorem, the hypotenuse of half of each triangle in the cross section can be found to be: $$\sqrt{(\frac{1}{24})^2+0.044^2}=0.049$$
+To find the cross sectional surface area (the multiplier for the current ridged section area), these lengths will be multiplied by 24 to give a final multiplier of 1.168. This can be seen in Figure 26 below.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{fig26.png}
+\caption{Cross sectional surface of the triangular prisms, also known as the ridge multiplier.}
+\label{fig:clock26}
+\end{figure}\\Therefore the total surface area of area B is: $$(0.215\times1.168)+0.084=0.335$$ 
+To find area C the modelled functions in Figure 27 have to simply be integrated from 0 to 0.633 on the x axis and then subtracted from each other. The same outer parabola taken from the Fourth Section for the ``area D'' (in that section) will be used in the equation below but will be translated -0.25 along the x axis.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.25]{fig27.png}
+\caption{3 different curves modelled using quartic functions using geogrebra.org.}
+\label{fig:clock27}
+\end{figure}
+\begin{equation}
+\begin{aligned} 
+&\int_{0}^{0.633}{(7.85x^4-6x^3-0.8x^2+0.17x+1.13)}\\&-(-3.23x^4+10.22x^3-7.16x^2+0.65x+0.77)\;dx \\&+\int_{0}^{0.633}{(3.84x^4-0.19x^3-3.05x^2+0.31x+1.06)}\\&-(-(1.010650888)(x+0.25)^2+0.427)\;dx=0.746
+\end{aligned}
+\end{equation}
+\\Finally, area D requires the use of double integration. To begin with, area D must be made in 3D involving the z axis. The notation used will be $z=f(x,y)$. \\\\The x function will be the same as the grey line seen in Figure 27 but with a transformation of -0.06 so the point where y=0 is where the shape appears to have the greatest depth gradient. \\\\The y function appears to be a cubic function. The area has a height of 0.3$x$ and the depth appears to be $1.5\times$ width C from the Fourth Section, resulting in a depth of 0.16$x$. The following graph tranformations have been done to this function in desmos.com to visualise the y function in the f(x,y) graph.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{fig28.png}
+\caption{The y function shown as an x function in desmos.com.}
+\label{fig:clock28}
+\end{figure}
+Therefore both functions put together in the f(x,y) notation gives: $$z=3.85x^4-0.19x^3-3.05x^2+0.31x+1-300y^3$$
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.16]{fig29.png}
+\caption{The f(x,y) function graphed using Visual MATH 4D and shown from 4 different angles. The program doesn't allow for parameters.}
+\label{fig:clock29}
+\end{figure}
+\\The following formula (Lamar) using double integration will be used to find the surface area: 
+\begin{equation}
+\begin{aligned} 
+Area&=\int{\int{\sqrt{(f_x(x,y)^2+f_y(x,y)^2+1}}}\;dA\\&\;\;\;\;\;\;D
+\end{aligned}
+\end{equation}\\The boundary conditions $0\leq x\leq0.633$ and $-0.08\leq y\leq0.08$ therefore by inserting the derivatives for the f(x) and f(y) functions, mupliplying by 2, we can find the area D in the following equation: 
+\begin{equation}
+\begin{aligned} 
+&2\int_{0}^{0.633}{\int_{-0.08}^{0.08}{\sqrt{(\frac{77x^3}{5}-\frac{57x^2}{100}-\frac{61x}{10}+\frac{31}{100})^2+(-900y^2)^2+1}}}\;dy\;dx\\&=2\int_{0}^{0.633}{0.4180898913(\frac{77x^3}{5}-\frac{57x^2}{100}-\frac{61x}{10}+\frac{31}{100})^2}\;dx\\&=0.385
+\end{aligned}
+\end{equation}\\All added up, the Wooden Seventh Section has a surface area of 1.608$x^2$ and the Golden Seventh Section has a surface area of 0$x^2$.
+
+
+\subsection{Eighth Section}
+This section will involve routine function making + 8 circles and a rectangle to approximate the last shape. 
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.3]{fig30.png}
+\caption{The last shape shown with 2 separate quintic functions overlain.}
+\label{fig:clock30}
+\end{figure}
+\\The area between both quintic functions will be calculated without a GDC, but with a standard calculator. To do this the original quintic functions will be manually integrated using the power rule $\int{x^n}\;dx=\frac{x^{n+1}}{n+1}$. The limits will be between 0.04 and 0.6 due to the accurately scaled Figure 30 showing the shape to be within these values on the $x$-axis.
+\begin{equation}
+\begin{aligned} 
+&\int_{0.04}^{0.6}{(173.17x^5-328.07x^4+222.85x^3-64.53x^2+7.36x-0.47)}\\&-(-179.92x^5+191.86x^4-52.27x^3+1.31x^2+0.58x-0.19)\;dx
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned} 
+&=\bigl[\tfrac{173.17}{6}x^6-\tfrac{328.07}{5}x^5+\tfrac{222.85}{4}x^4-\tfrac{64.53}{3}x^3+\tfrac{7.36}{2}x^2-0.47x\bigr]_{0.04}^{0.6} \\&- \bigl[\tfrac{-179.92}{6}x^6-\tfrac{191.86}{5}x^5+\tfrac{52.27}{4}x^4-\tfrac{1.31}{3}x^3+\tfrac{0.58}{2}x^2-0.19x\bigr]_{0.04}^{0.6}
+\end{aligned}
+\end{equation}
+$$=0.066$$
+Each circular protrusion is measured to have an average radius of 0.03$x$ and the rectangular section has a horizontal length of 0.313$x$ and a vertical length of 0.067$x$.
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{fig31.png}
+\caption{The last shape shown with the 8 circles and 1 rectangle overlain with all lengths shown in $x$ units.}
+\label{fig:clock31}
+\end{figure}
+\\Therefore the total area of this shape is:
+\begin{equation}
+\begin{aligned} 
+2(0.066)+8\pi(0.03)^2+(0.313\times0.067)=0.176
+\end{aligned}
+\end{equation}
+The Golden Eighth Section has a surface area of 0.176$x^2$ and the Wooden Eighth Section is 0$x^2$.
+\\\\In conclusion, the Total Wooden Surface Area is: $$3.075+2.403+2.437+0.616+1.608=10.139x^2$$ The Total Golden Surface Area is: $$2.911+1.328+0.292+0.176=4.707x^2$$ Therefore the combined surface area is 14.846$x^2$. To find the ratio, the Total Wooden Surface Area will be divided by the Total Golden Surface Area to find the quantity of wood varnish needed for 1 arbitrary unit of gold paint. The $x^2$ units cancel out in the following calculation: 
+$$\frac{10.139x^2}{4.707x^2}=\frac{10.139}{4.707}=2.154025918844274484809857658806$$
+Therefore there is a 2.154:1 ratio of wood varnish to gold paint.
+
+
+\section{Analysis and Conclusion}
+
+This result was expected, due to the coloured renders in Figure 1 appearing to have a roughly 2:1 ratio of wood to gold on the front face, judging purely by eye. \\\\All lengths in terms of $x$ were written to 3 decimal places due to the raw values sometimes being recurring values. This may have resulted in a very minimal error for larger areas but a greater error for very small sections such as the hinges. Some areas also had to be approximated as shapes different to the true shapes (such as the golden ornament in the sixth section), which may have resulted in a small error too.
+As these errors are all so small relative to the total area, it doesn't change the final ratio due to it being rounded to 3 decimal places. \\\\The reliability can be increased with a second person using their own unique method to find the surface areas and comparing their results to mine. \\\\The choice to count pixels to measure the distances resulted in extremely precise values and thanks to software such as GIMP which allows me to zoom in 800\% on the image. There is such small human error on that front that it can be entirely discounted. There may be human error however in the input of calculations into the calculator, as some equations involve long strings of precise numbers. To reduce error on this front, I retyped each formula twice into the calculator which significantly lowers the probability human error was present. Two calculation errors yielding the same value are orders of magnitude less likely to occur than just making one calculation error. \\\\I originally wanted to find the surface area of the entire clock including the sides, back and interior. Unfortunetely, this was impossible to do because the full render of the clock was locked behind a steep paywall. All that was available were the free preview screenshots from the website selling the render, limiting the amount of areas visible. Calculating the depth was possible however, thanks to a single image of the blank clock rotated along the y axis.\\\\Upon starting this assessment, I estimated the end product would be roughly 20 pages. Due to the surprising amount of detail this clock has, as well as the variety of techniques used for each section and the diagrams to accompany them, this paper is over 30 pages long. If I were to do a similar assessment in the future, I would pick a 3D design with less basic shapes such as squares and circles. Those sections took a lot of time to measure, a lot effort to draw and a lot of space on the page. Those sections reached a point of diminishing returns in the time and effort taken relative to the complexity of the maths being used. \\\\A possible extension would be to also find the surface area of the shapes on the side of the clock face, as other unique mathematical processes could be applied to find the unique spiral prisms and elliptical prisms seen.
+
+\section{References}
+(Lamar) - https://tutorial.math.lamar.edu/\\
+(Turbo) - https://www.turbosquid.com/3d-models/3d-old-standing-clock/805758
+\end{document}
